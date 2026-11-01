@@ -1,0 +1,68 @@
+name: Build installer
+
+# Собирает Klira_Setup_<версия>.exe на Windows из уже опубликованного выпуска (архив Klira_<версия>.zip).
+# Результат: Actions → этот запуск → Artifacts → Klira_Setup. Выпуск этот процесс не меняет.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'installer/**'
+      - '.github/workflows/installer.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download the release archive and verify its checksum
+        shell: pwsh
+        run: |
+          $ver = (Get-Content installer/VERSION).Trim()
+          $base = "https://github.com/${{ github.repository }}/releases/download/v$ver"
+          Invoke-WebRequest "$base/Klira_$ver.zip" -OutFile Klira.zip
+          Invoke-WebRequest "$base/SHA256SUMS.txt" -OutFile SHA256SUMS.txt
+          $want = ((Get-Content SHA256SUMS.txt | Where-Object { $_ -match "Klira_$ver\.zip" }) -split '\s+')[0].ToLower()
+          $got = (Get-FileHash Klira.zip -Algorithm SHA256).Hash.ToLower()
+          if ($got -ne $want) { throw "Контрольная сумма архива не совпадает: $got вместо $want" }
+          Expand-Archive Klira.zip -DestinationPath unz
+          New-Item -ItemType Directory build | Out-Null
+          foreach ($f in 'Klira.exe','WebView2Loader.dll','EULA.txt','THIRD_PARTY_NOTICES.txt','PRIVACY.md') {
+            Copy-Item "unz/Klira/$f" "build/$f"
+          }
+          Copy-Item installer/on.ico build/on.ico
+          # Inno Setup читает UTF-8 только с BOM
+          $utf8bom = New-Object System.Text.UTF8Encoding $true
+          $eula = [IO.File]::ReadAllText("$PWD/build/EULA.txt", [Text.Encoding]::UTF8)
+          [IO.File]::WriteAllText("$PWD/build/EULA.txt", $eula, $utf8bom)
+          $iss = [IO.File]::ReadAllText("$PWD/installer/Klira.iss", [Text.Encoding]::UTF8).Replace('@VERSION@', $ver)
+          [IO.File]::WriteAllText("$PWD/build/Klira.iss", $iss, $utf8bom)
+
+      - name: Compile with Inno Setup
+        shell: pwsh
+        run: |
+          $iscc = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe"
+          & $iscc build\Klira.iss
+          if ($LASTEXITCODE -ne 0) { throw "ISCC failed: $LASTEXITCODE" }
+
+      - name: Checksums
+        shell: pwsh
+        run: |
+          $ver = (Get-Content installer/VERSION).Trim()
+          $exe = "build/Output/Klira_Setup_$ver.exe"
+          $h = (Get-FileHash $exe -Algorithm SHA256).Hash.ToLower()
+          New-Item -ItemType Directory out | Out-Null
+          Copy-Item $exe out/
+          $lines = @(Get-Content SHA256SUMS.txt | Where-Object { $_.Trim() -ne '' -and $_ -notmatch 'Klira_Setup_' })
+          $lines += "$h  Klira_Setup_$ver.exe"
+          [IO.File]::WriteAllText("$PWD/out/SHA256SUMS.txt", (($lines -join "`n") + "`n"))
+          "SHA-256 установщика: $h" | Tee-Object -FilePath $env:GITHUB_STEP_SUMMARY -Append
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Klira_Setup
+          path: out/*
+          retention-days: 30
