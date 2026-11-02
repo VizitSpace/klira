@@ -1,0 +1,63 @@
+# Политика конфиденциальности Klira / Privacy Policy / Політика конфіденційності
+
+_Редакция от 02.11.2026 (версия программы 2.6.0)._
+
+## Русский
+
+**Klira** исправляет опечатки и раскладку прямо во время набора. Для этого программа читает нажатия клавиш на вашем компьютере. Всё происходит только на вашем компьютере.
+
+- **Согласие.** При первом запуске Klira ничего не обрабатывает, пока вы не отметите согласие на экране приветствия. Отозвать согласие можно в любой момент: «Настройки → О программе → Удалить все мои данные» — после этого программа снова ждёт согласия и ничего не обрабатывает.
+- **Что обрабатывается.** Только текущая строка до курсора (не больше 400 символов), чтобы правильно расставить запятые и показать подсказку. Она хранится только в оперативной памяти и забывается после Enter, щелчка мыши, смены окна или клавиш перемещения.
+- **Подсказка у курсора.** Чтобы показать окошко рядом с курсором, Klira узнаёт у Windows только положение курсора в активной программе. Текст других окон не читается.
+- **Проверка выделенного текста.** Только когда вы сами нажимаете эту комбинацию: выделенный текст копируется, проверяется на вашем компьютере и показывается в окне Klira (локальная страница `127.0.0.1`, защищённая случайным ключом). Текст держится только в памяти и удаляется после вставки обратно или через 30 минут. Он не сохраняется на диск и никуда не отправляется. Прежнее содержимое буфера обмена возвращается.
+- **Список запущенных программ.** Чтобы предупредить о другой программе-переключателе, которая мешала бы Klira, читаются только имена запущенных программ (например, `punto.exe`). Они сравниваются со встроенным списком прямо в памяти, никуда не записываются и не передаются; в чужие программы Klira не заглядывает и ничего в них не меняет.
+- **Конвертация выделенного текста.** Только когда вы сами нажимаете эту комбинацию клавиш: выделенный текст копируется через буфер обмена, переводится в другую раскладку и вставляется обратно, после чего прежнее содержимое буфера возвращается. Временный текст помечается так, чтобы Windows не сохраняла его в журнале буфера обмена (Win+V) и не отправляла в облачный буфер. Сам Klira текст не сохраняет.
+- **Проверка обновлений.** Раз в сутки Klira отправляет один запрос на `api.github.com` (страница выпусков github.com/VizitSpace/klira) и получает номер последней версии. В запросе нет ваших данных: ни текста, ни настроек, ни имени компьютера, только название программы с номером версии (`Klira/2.6.0`). Как у любого сайта, GitHub видит IP-адрес, с которого пришёл запрос, и хранит его по своим правилам (https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement). Ничего не скачивается и не устанавливается без вашего действия: если вышла новая версия, Klira показывает уведомление и пункт в меню значка, а страницу загрузки вы открываете сами. Проверку можно выключить: «Настройки → Основное → Запуск → Сообщать о новых версиях». В версии из Microsoft Store проверки нет, обновляет Store. Результат последней проверки хранится в файле `update.json` (дата и номер версии).
+- **Что не делается.** Набранный текст не сохраняется на диск, не пишется в журнал и не передаётся третьим лицам. Реклам и аналитики в программе нет. Единственное обращение к интернету — проверка обновлений (следующий пункт).
+- **Что хранится на диске** (папка `%APPDATA%\Klira`, у версии из Microsoft Store — в её личной папке):
+  - `config.json` — ваши настройки, горячие клавиши, слова-исключения, автозамены, список программ;
+  - `stats.json` — счётчики «сколько исправлений каждого вида сделано» (только числа, без слов и программ). Показываются вам в настройках и никуда не отправляются;
+  - `klira.log` — служебные события (запуск, ошибки), без набранного текста.
+  - `windows.json` — размер окон настроек и проверки (только числа).
+- **Окно настроек** работает на адресе `127.0.0.1` (только ваш компьютер), защищено случайным ключом и недоступно из сети. Окно показывает компонент Windows «Microsoft Edge WebView2». Он загружает страницы только с вашего компьютера; Klira отключает в нём проверку адресов SmartScreen и фоновые сетевые запросы. Его служебный кэш лежит в `%LOCALAPPDATA%\Klira\WebView2`, набранный текст туда не попадает (страницы помечены «не кэшировать»). Сам компонент WebView2 обновляется Windows и регулируется её параметрами диагностических данных.
+- **Пароли.** В стандартных полях ввода пароля Windows программа не работает. Менеджеры паролей и терминалы можно добавить в список исключений (многие добавлены заранее). В играх и полноэкранных программах Klira по умолчанию ставится на паузу.
+- **Удаление данных.** Кнопка «Удалить все мои данные» в настройках или удаление программы вместе с папкой `%APPDATA%\Klira`.
+- **Дети.** Программа не собирает персональные данные, в том числе данные детей.
+- **Контакты.** [укажите e-mail издателя]
+
+## English
+
+**Klira** fixes typos and wrong keyboard layout as you type, so it reads your key presses — locally, on your computer only.
+
+- **Consent:** on first start Klira processes nothing until you tick the consent box on the welcome screen. You can withdraw consent at any time: Settings → About → "Delete all my data"; Klira then stops and waits for consent again.
+- **What is processed:** only the current line left of the caret (at most 400 characters), to place commas correctly and show hints. It is held in memory only and discarded after Enter, a mouse click, a window change or a navigation key.
+- **Hints near the caret:** to place the hint window, Klira asks Windows for the caret position of the active app only; it never reads the text of other windows.
+- **Check selected text:** only when you press that hotkey, the selection is copied, checked locally and shown in the Klira window (a local `127.0.0.1` page guarded by a random key). The text stays in memory only and is deleted after it is pasted back or after 30 minutes; it is never saved or sent. Your previous clipboard text is restored.
+- **Running programs:** to warn about another layout switcher that would conflict with Klira, only the executable names of running programs are read and compared with a built-in list in memory. They are never stored or sent, and Klira never reads or changes other programs.
+- **Convert selection:** only when you press that hotkey, the selected text is copied via the clipboard, converted and pasted back; your previous clipboard text is then restored. The temporary text is marked so that Windows keeps it out of clipboard history (Win+V) and cloud clipboard. Klira stores nothing.
+- **Update check:** once a day Klira sends one request to `api.github.com` (the releases page of github.com/VizitSpace/klira) and receives the number of the latest version. The request contains none of your data — no text, no settings, no computer name — only the program name and version (`Klira/2.6.0`). As with any website, GitHub sees the IP address of the request and handles it under its own privacy statement. Nothing is downloaded or installed without your action: if a new version is out, Klira shows a notification and a tray menu item, and you open the download page yourself. You can switch it off: Settings → General → Startup → "Notify about new versions". The Microsoft Store build never checks; the Store updates it. The result of the last check is kept in `update.json` (date and version number).
+- **Never done:** typed text is never saved to disk, logged or sent anywhere. No ads, no analytics. The only network request is the update check (see the next item).
+- **Stored on disk** (`%APPDATA%\Klira`): `config.json` (your settings), `stats.json` (local counters of fixes by kind — numbers only, never words or app names, never sent), `klira.log` (start-ups and errors, no typed text).
+- The settings window is served on `127.0.0.1` only and guarded by a random key. It is displayed by the Windows component Microsoft Edge WebView2, which loads pages from your computer only; Klira turns off its SmartScreen address checks and background network requests. Its cache lives in `%LOCALAPPDATA%\Klira\WebView2` and never contains typed text (the pages are marked no-store). WebView2 itself is updated by Windows and follows Windows diagnostic-data settings. `windows.json` stores only the window sizes.
+- Passive in standard Windows password fields; password managers and terminals can be excluded (many are by default). Pauses itself in games and full-screen apps by default.
+- **Delete your data:** the "Delete all my data" button, or uninstall and delete `%APPDATA%\Klira`.
+- **Children:** no personal data is collected from anyone, including children.
+- **Contact:** [publisher e-mail]
+
+## Українська
+
+**Klira** виправляє помилки та розкладку під час набору, тому читає натискання клавіш — лише локально на вашому комп'ютері.
+
+- **Згода:** під час першого запуску Klira нічого не обробляє, доки ви не поставите позначку згоди на екрані привітання. Відкликати згоду можна будь-коли: «Налаштування → Про програму → Видалити всі мої дані».
+- **Що обробляється:** лише поточний рядок до курсора (не більше 400 символів), щоб правильно ставити коми й показувати підказки. Він зберігається лише в пам'яті й забувається після Enter, клацання миші, зміни вікна чи клавіш переміщення.
+- **Підказка біля курсора:** Klira дізнається у Windows лише положення курсора в активній програмі; текст інших вікон не читається.
+- **Перевірка виділеного тексту:** лише коли ви натискаєте цю комбінацію. Текст перевіряється на вашому комп'ютері, показується у вікні Klira (локальна сторінка `127.0.0.1`), зберігається лише в пам'яті й видаляється після вставлення або через 30 хвилин.
+- **Запущені програми:** щоб попередити про іншу програму-перемикач, читаються лише імена запущених програм і порівнюються з вбудованим списком у пам'яті. Вони ніде не зберігаються й нікуди не надсилаються.
+- **Конвертація виділеного:** лише коли ви натискаєте цю комбінацію: текст копіюється через буфер обміну, конвертується й вставляється назад, попередній вміст буфера відновлюється.
+- **Перевірка оновлень:** раз на добу Klira надсилає один запит на `api.github.com` (сторінка випусків github.com/VizitSpace/klira) і отримує номер останньої версії. У запиті немає ваших даних: ні тексту, ні налаштувань, ні імені комп'ютера, лише назва програми з номером версії (`Klira/2.6.0`). Як будь-який сайт, GitHub бачить IP-адресу запиту й обробляє її за власними правилами. Нічого не завантажується й не встановлюється без вашої дії: якщо вийшла нова версія, Klira показує сповіщення та пункт у меню значка, а сторінку завантаження ви відкриваєте самі. Перевірку можна вимкнути: «Налаштування → Основне → Запуск → Повідомляти про нові версії». У версії з Microsoft Store перевірки немає, оновлює Store. Результат останньої перевірки зберігається у файлі `update.json` (дата й номер версії).
+- **Чого не робиться:** набраний текст не зберігається на диск, не потрапляє до журналу й нікому не надсилається. Реклами й аналітики немає. Єдине звернення до інтернету — перевірка оновлень (наступний пункт).
+- **Що зберігається** (`%APPDATA%\Klira`): `config.json` (налаштування), `stats.json` (лише числа: скільки виправлень кожного виду, без слів і назв програм, нікуди не надсилається), `klira.log` (запуск і помилки, без тексту).
+- Вікно налаштувань працює лише на `127.0.0.1` і захищене випадковим ключем. Його показує компонент Windows «Microsoft Edge WebView2»: сторінки лише з вашого комп'ютера, перевірку адрес SmartScreen і фонові мережеві запити Klira вимикає. Службовий кеш — у `%LOCALAPPDATA%\Klira\WebView2`, набраного тексту там немає. `windows.json` зберігає лише розміри вікон.
+- У стандартних полях пароля Windows програма не працює; в іграх і повноекранних програмах за замовчуванням стає на паузу.
+- **Видалення даних:** кнопка «Видалити всі мої дані» або видалення програми разом із папкою `%APPDATA%\Klira`.
+- **Контакти:** [e-mail видавця]

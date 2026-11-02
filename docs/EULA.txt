@@ -1,0 +1,108 @@
+KLIRA — ЛИЦЕНЗИОННОЕ СОГЛАШЕНИЕ С КОНЕЧНЫМ ПОЛЬЗОВАТЕЛЕМ
+© 2026 Олександр Коханчук. Все права защищены.
+
+Устанавливая или используя программу Klira (далее — «Программа»), вы соглашаетесь с условиями этого соглашения. Если вы не согласны, не устанавливайте и не используйте Программу.
+
+1. Правообладатель
+Программа, её код, интерфейс, словари, тексты, название «Klira» и логотип принадлежат Олександру Коханчуку (далее — «Правообладатель») и охраняются законодательством Украины об авторском праве и международными договорами.
+
+2. Что разрешено
+Вам предоставляется неисключительное, непередаваемое право устанавливать и использовать Программу на своих устройствах — в личных и рабочих целях — на условиях, на которых вы её получили (например, через Microsoft Store).
+
+3. Что запрещено
+Без письменного разрешения Правообладателя запрещено:
+а) продавать, сдавать в аренду, сублицензировать Программу или брать плату за доступ к ней;
+б) распространять копии Программы, в том числе изменённые, кроме ссылки на официальную страницу Программы;
+в) изменять, декомпилировать, дизассемблировать Программу или иным способом пытаться получить её исходный код — кроме случаев, прямо разрешённых законом;
+г) удалять или изменять сведения об авторстве и правообладателе;
+д) выдавать Программу или её части за свою разработку;
+е) использовать название «Klira» и логотип для других программ, сайтов и услуг.
+
+4. Сторонние компоненты
+В Программу входят компоненты других авторов (например, библиотека загрузки Microsoft WebView2). Они распространяются на условиях своих лицензий — см. файл THIRD_PARTY_NOTICES.txt.
+
+5. Конфиденциальность
+Как Программа обращается с данными, описано в Политике конфиденциальности (PRIVACY.md). Набранный текст не сохраняется и никуда не отправляется.
+
+6. Отказ от гарантий
+Программа предоставляется «как есть». Правообладатель не гарантирует, что Программа будет работать без ошибок и исправлять все опечатки, и не отвечает за убытки, возникшие при её использовании, — в пределах, допустимых законом.
+
+7. Прекращение
+При нарушении этого соглашения право использовать Программу прекращается автоматически. В этом случае удалите Программу со своих устройств.
+
+8. Применимое право
+К этому соглашению применяется право Украины.
+
+────────────────────────────────────────
+
+KLIRA — ЛІЦЕНЗІЙНА УГОДА З КІНЦЕВИМ КОРИСТУВАЧЕМ
+© 2026 Олександр Коханчук. Усі права захищено.
+
+Встановлюючи або використовуючи програму Klira (далі — «Програма»), ви погоджуєтеся з умовами цієї угоди. Якщо ви не згодні, не встановлюйте й не використовуйте Програму.
+
+1. Правовласник
+Програма, її код, інтерфейс, словники, тексти, назва «Klira» та логотип належать Олександру Коханчуку (далі — «Правовласник») і охороняються законодавством України про авторське право та міжнародними договорами.
+
+2. Що дозволено
+Вам надається невиключне право, яке не можна передати, встановлювати й використовувати Програму на своїх пристроях — в особистих і робочих цілях — на умовах, на яких ви її отримали (наприклад, через Microsoft Store).
+
+3. Що заборонено
+Без письмового дозволу Правовласника заборонено:
+а) продавати, здавати в оренду, субліцензувати Програму або брати плату за доступ до неї;
+б) поширювати копії Програми, зокрема змінені, окрім посилання на офіційну сторінку Програми;
+в) змінювати, декомпілювати, дизасемблювати Програму чи в інший спосіб намагатися отримати її вихідний код — окрім випадків, прямо дозволених законом;
+г) видаляти або змінювати відомості про авторство й правовласника;
+д) видавати Програму або її частини за власну розробку;
+е) використовувати назву «Klira» та логотип для інших програм, сайтів і послуг.
+
+4. Сторонні компоненти
+До Програми входять компоненти інших авторів (наприклад, бібліотека завантаження Microsoft WebView2). Вони поширюються на умовах власних ліцензій — див. файл THIRD_PARTY_NOTICES.txt.
+
+5. Конфіденційність
+Як Програма поводиться з даними, описано в Політиці конфіденційності (PRIVACY.md). Набраний текст не зберігається й нікуди не надсилається.
+
+6. Відмова від гарантій
+Програма надається «як є». Правовласник не гарантує, що Програма працюватиме без помилок і виправлятиме всі описки, і не відповідає за збитки, що виникли під час її використання, — у межах, дозволених законом.
+
+7. Припинення
+У разі порушення цієї угоди право користуватися Програмою припиняється автоматично. У такому разі видаліть Програму зі своїх пристроїв.
+
+8. Застосовне право
+До цієї угоди застосовується право України.
+
+────────────────────────────────────────
+
+KLIRA — END USER LICENSE AGREEMENT
+© 2026 Oleksandr Kokhanchuk. All rights reserved.
+
+By installing or using Klira (the "Software") you agree to this agreement. If you do not agree, do not install or use the Software.
+
+1. Owner
+The Software, its code, interface, dictionaries, texts, the name "Klira" and the logo belong to Oleksandr Kokhanchuk (the "Owner") and are protected by the copyright law of Ukraine and international treaties.
+
+2. What you may do
+You get a non-exclusive, non-transferable right to install and use the Software on your own devices, for personal and work purposes, on the terms under which you obtained it (for example, through the Microsoft Store).
+
+3. What you may not do
+Without the Owner's written permission you may not:
+a) sell, rent, sublicense the Software or charge for access to it;
+b) distribute copies of the Software, modified or not, other than a link to the official page of the Software;
+c) modify, decompile, disassemble the Software or otherwise try to obtain its source code, except where the law expressly allows it;
+d) remove or change the authorship and ownership notices;
+e) present the Software or any part of it as your own work;
+f) use the name "Klira" or the logo for other software, websites or services.
+
+4. Third-party components
+The Software includes components by other authors (for example, the Microsoft WebView2 loader). They are provided under their own licenses — see THIRD_PARTY_NOTICES.txt.
+
+5. Privacy
+How the Software handles data is described in the Privacy Policy (PRIVACY.md). Typed text is never stored or sent anywhere.
+
+6. No warranty
+The Software is provided "as is". To the extent permitted by law, the Owner does not warrant that the Software is error-free or corrects every typo, and is not liable for any damages arising from its use.
+
+7. Termination
+If you breach this agreement, your right to use the Software ends automatically. In that case, remove the Software from your devices.
+
+8. Governing law
+This agreement is governed by the law of Ukraine.
