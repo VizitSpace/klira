@@ -1,7 +1,8 @@
 name: Build installer
 
 # Собирает Klira_Setup_<версия>.exe на Windows из уже опубликованного выпуска (архив Klira_<версия>.zip).
-# Результат: Actions → этот запуск → Artifacts → Klira_Setup. Выпуск этот процесс не меняет.
+# Результат: готовый установщик кладётся в папку downloads/ этого репозитория (прямая ссылка на скачивание)
+# и дублируется в Artifacts запуска. Выпуски (Releases) этот процесс не меняет.
 on:
   workflow_dispatch:
   push:
@@ -10,7 +11,7 @@ on:
       - '.github/workflows/installer.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -66,3 +67,17 @@ jobs:
           name: Klira_Setup
           path: out/*
           retention-days: 30
+
+      - name: Publish the installer to downloads/
+        shell: pwsh
+        run: |
+          $ver = (Get-Content installer/VERSION).Trim()
+          New-Item -ItemType Directory -Force downloads | Out-Null
+          Get-ChildItem downloads -Filter 'Klira_Setup_*.exe' | Remove-Item
+          Copy-Item "out/Klira_Setup_$ver.exe" downloads/
+          Copy-Item out/SHA256SUMS.txt downloads/SHA256SUMS.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f downloads
+          git commit -m "Installer Klira_Setup_$ver.exe (built by GitHub Actions)"
+          git push
