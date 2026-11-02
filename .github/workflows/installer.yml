@@ -107,3 +107,14 @@ jobs:
           git commit -m "Downloads for Klira $((Get-Content installer/VERSION).Trim()) (built by GitHub Actions)"
           git pull --rebase
           git push
+
+      - name: Attach the files to the GitHub release (if it exists)
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ver = (Get-Content installer/VERSION).Trim()
+          gh release view "v$ver" --repo ${{ github.repository }} *> $null
+          if ($LASTEXITCODE -ne 0) { "Релиза v$ver ещё нет: файлы не прикрепляю."; exit 0 }
+          gh release upload "v$ver" (Get-ChildItem out -File | ForEach-Object { $_.FullName }) --clobber --repo ${{ github.repository }}
+          if ($LASTEXITCODE -ne 0) { throw "Не удалось прикрепить файлы к релизу" }
