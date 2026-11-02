@@ -1,6 +1,6 @@
 name: Build installer
 
-# Собирает на Windows всё, что нужно для скачивания, из готовых программ в installer/Klira_<версия>_binaries.zip:
+# Собирает на Windows всё, что нужно для скачивания, из готовых программ в .github/installer/Klira_<версия>_binaries.zip:
 #   downloads/Klira_Setup_<версия>.exe        - один установщик для Windows x64, x86 (32 бит) и ARM64
 #   downloads/Klira_<версия>_x64.zip / _x86.zip / _arm64.zip - переносные версии (распаковал и запустил)
 #   downloads/latest.json, SHA256SUMS.txt     - номер последней версии и контрольные суммы (по ним Klira обновляется сама)
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'installer/**'
+      - '.github/installer/**'
       - '.github/workflows/installer.yml'
 
 permissions:
@@ -26,8 +26,8 @@ jobs:
       - name: Unpack the programs
         shell: pwsh
         run: |
-          $ver = (Get-Content installer/VERSION).Trim()
-          Expand-Archive "installer/Klira_${ver}_binaries.zip" -DestinationPath unz
+          $ver = (Get-Content .github/installer/VERSION).Trim()
+          Expand-Archive ".github/installer/Klira_${ver}_binaries.zip" -DestinationPath unz
           $src = "unz/Klira_${ver}_binaries"
           New-Item -ItemType Directory build | Out-Null
           foreach ($a in 'x64','x86','arm64') {
@@ -35,7 +35,7 @@ jobs:
             Copy-Item "$src/$a/Klira.exe" "build/$a/Klira.exe"
           }
           foreach ($f in 'EULA.txt','THIRD_PARTY_NOTICES.txt','PRIVACY.md','README.md') { Copy-Item "$src/$f" "build/$f" }
-          Copy-Item installer/on.ico build/on.ico
+          Copy-Item .github/installer/on.ico build/on.ico
 
       - name: Get WebView2Loader.dll for x64, x86 and ARM64
         shell: pwsh
@@ -52,11 +52,11 @@ jobs:
           }
           Copy-Item wv2/LICENSE.txt build/WebView2_LICENSE.txt -ErrorAction SilentlyContinue
           # Inno Setup читает UTF-8 только с BOM
-          $ver = (Get-Content installer/VERSION).Trim()
+          $ver = (Get-Content .github/installer/VERSION).Trim()
           $utf8bom = New-Object System.Text.UTF8Encoding $true
           $eula = [IO.File]::ReadAllText("$PWD/build/EULA.txt", [Text.Encoding]::UTF8)
           [IO.File]::WriteAllText("$PWD/build/EULA.txt", $eula, $utf8bom)
-          $iss = [IO.File]::ReadAllText("$PWD/installer/Klira.iss", [Text.Encoding]::UTF8).Replace('@VERSION@', $ver)
+          $iss = [IO.File]::ReadAllText("$PWD/.github/installer/Klira.iss", [Text.Encoding]::UTF8).Replace('@VERSION@', $ver)
           [IO.File]::WriteAllText("$PWD/build/Klira.iss", $iss, $utf8bom)
 
       - name: Compile the installer with Inno Setup
@@ -69,7 +69,7 @@ jobs:
       - name: Portable archives, checksums, latest.json
         shell: pwsh
         run: |
-          $ver = (Get-Content installer/VERSION).Trim()
+          $ver = (Get-Content .github/installer/VERSION).Trim()
           New-Item -ItemType Directory out | Out-Null
           Copy-Item "build/Output/Klira_Setup_$ver.exe" out/
           foreach ($a in 'x64','x86','arm64') {
@@ -104,7 +104,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A -f downloads
-          git commit -m "Downloads for Klira $((Get-Content installer/VERSION).Trim()) (built by GitHub Actions)"
+          git commit -m "Downloads for Klira $((Get-Content .github/installer/VERSION).Trim()) (built by GitHub Actions)"
           git pull --rebase
           git push
 
@@ -113,7 +113,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          $ver = (Get-Content installer/VERSION).Trim()
+          $ver = (Get-Content .github/installer/VERSION).Trim()
           gh release view "v$ver" --repo ${{ github.repository }} *> $null
           if ($LASTEXITCODE -ne 0) { "Релиза v$ver ещё нет: файлы не прикрепляю."; exit 0 }
           gh release upload "v$ver" (Get-ChildItem out -File | ForEach-Object { $_.FullName }) --clobber --repo ${{ github.repository }}
