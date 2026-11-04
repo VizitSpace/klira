@@ -8,6 +8,9 @@ name: Build installer
 # Результат кладётся в папку downloads/ этого репозитория и дублируется в Artifacts запуска.
 # Выпуски (Releases) этот процесс не меняет.
 on:
+  schedule:
+    # Раз в неделю (понедельник, 05:17 UTC) проверяем, не вышли ли у Mozilla новые версии языков, и добавляем их в релиз translator-models.
+    - cron: '17 5 * * 1'
   workflow_dispatch:
     inputs:
       task:
@@ -61,7 +64,7 @@ jobs:
 
   models-publish:
     # Берёт свежие модели Mozilla, кладёт их в релиз translator-models и обновляет downloads/models.json.
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.task == 'models-publish' }}
+    if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.task == 'models-publish') }}
     runs-on: ubuntu-latest
     timeout-minutes: 300
     steps:
@@ -123,7 +126,7 @@ jobs:
           exit 1
 
   build:
-    if: ${{ github.event_name != 'workflow_dispatch' || inputs.task == 'build' }}
+    if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.task == 'build') }}
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
