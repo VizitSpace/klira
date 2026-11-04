@@ -86,6 +86,20 @@ jobs:
           [IO.File]::WriteAllText("$PWD/out/SHA256SUMS.txt", (($lines -join "`n") + "`n"))
           $h = (Get-FileHash "out/Klira_Setup_$ver.exe" -Algorithm SHA256).Hash.ToLower()
           $json = '{"version":"' + $ver + '","installer":"https://raw.githubusercontent.com/VizitSpace/klira/main/downloads/Klira_Setup_' + $ver + '.exe","sha256":"' + $h + '"}'
+          # The list of changes (notes.json) is added to latest.json when it is valid; on any problem
+          # the file stays exactly as before, so the update itself can never break because of it.
+          try {
+            $nf = ".github/installer/notes.json"
+            if (Test-Path $nf) {
+              $raw = [IO.File]::ReadAllText("$PWD/$nf", [Text.Encoding]::UTF8)
+              $null = $raw | ConvertFrom-Json -ErrorAction Stop
+              $compact = ($raw -replace '\s*\r?\n\s*', '').Trim()
+              $withNotes = $json.Substring(0, $json.Length - 1) + ',"notes":' + $compact + '}'
+              $null = $withNotes | ConvertFrom-Json -ErrorAction Stop
+              $json = $withNotes
+              "notes.json added to latest.json"
+            }
+          } catch { "notes.json skipped: $_" }
           [IO.File]::WriteAllText("$PWD/out/latest.json", $json + "`n")
           ($lines -join "`n") | Tee-Object -FilePath $env:GITHUB_STEP_SUMMARY -Append
 
