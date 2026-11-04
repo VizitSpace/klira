@@ -1,0 +1,48 @@
+Klira — лицензии / Licenses
+© 2026 Олександр Коханчук (Oleksandr Kokhanchuk)
+
+РУССКИЙ
+
+Этот репозиторий содержит материалы с разными условиями.
+
+1. Программа Klira (установщик, архивы и файлы в папке downloads, файлы релизов).
+   Используется на условиях Лицензионного соглашения: docs/EULA.txt (то же соглашение показывается
+   в программе). Можно бесплатно устанавливать и использовать для личных и рабочих целей.
+   Нельзя продавать, распространять копии (в том числе изменённые), изменять и декомпилировать
+   программу, использовать название «Klira» и логотип для других продуктов. Исходный код
+   программы не публикуется и этой лицензией не предоставляется.
+
+2. Словари подсказок (папка dictionaries).
+   Лицензия CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Получены из wordfreq 3.1.1
+   (Robyn Speer и др., https://github.com/rspeer/wordfreq). Можно копировать и изменять с указанием
+   источника и на тех же условиях. Сама программа Klira под эту лицензию не подпадает.
+
+3. Тексты README и документы в папке docs (кроме EULA.txt, см. п. 1).
+   Все права защищены. Можно читать и делиться ссылкой на репозиторий; копировать, переделывать
+   и публиковать в другом месте без письменного разрешения автора нельзя.
+
+Название «Klira» и логотип принадлежат автору. Вопросы и разрешения: раздел Issues на
+https://github.com/VizitSpace/klira/issues
+
+ENGLISH
+
+This repository contains material under different terms.
+
+1. The Klira program (installer, archives and files in the downloads folder, release files).
+   Licensed under the End User License Agreement in docs/EULA.txt (the same agreement is shown in
+   the program, in Russian). You may install and use it free of charge for personal and work purposes.
+   You may not sell it, distribute copies (modified or not), modify or decompile it, or use the name
+   "Klira" and the logo for other products. The program's source code is not published and is not
+   licensed here.
+
+2. The word-completion dictionaries (dictionaries folder).
+   Licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Derived from
+   wordfreq 3.1.1 (Robyn Speer et al., https://github.com/rspeer/wordfreq). You may copy and adapt
+   them with attribution and under the same licence. The Klira program itself is not covered by it.
+
+3. The README and the documents in the docs folder (except EULA.txt, see 1).
+   All rights reserved. You may read them and link to the repository; copying, adapting or
+   republishing them elsewhere requires the author's written permission.
+
+The name "Klira" and the logo belong to the author. Questions and permissions: Issues at
+https://github.com/VizitSpace/klira/issues
