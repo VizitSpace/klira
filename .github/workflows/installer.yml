@@ -87,29 +87,39 @@ jobs:
           exit 1
 
   engine-fetch:
-    # Только скачивает файлы движка Bergamot (JS и wasm) из репозитория Mozilla и показывает, что там есть.
+    # Скачивает движок перевода Bergamot (JS и wasm, MPL-2.0) из npm-пакета проекта и кладёт в translator/engine/.
     if: ${{ github.event_name == 'workflow_dispatch' && inputs.task == 'engine-fetch' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Find and download the engine
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - uses: actions/checkout@v4
+      - name: Download the engine
         run: |
-          mkdir -p engine
-          for d in extension/model/static/translation; do
-            gh api "repos/mozilla-extensions/firefox-translations/contents/$d" --jq '.[]|[.name,.size,.download_url]|@tsv' | tee list.txt
+          mkdir -p tmp && cd tmp
+          npm view @browsermt/bergamot-translator version license dist.tarball || true
+          npm pack @browsermt/bergamot-translator
+          mkdir pkg && tar -xzf *.tgz -C pkg
+          find pkg -type f | head -50
+          cat pkg/package/package.json | head -40
+      - name: Put it into the repository
+        run: |
+          mkdir -p translator/engine
+          cd tmp/pkg/package
+          for f in $(find . -type f \( -name '*.js' -o -name '*.wasm' -o -name 'LICENSE*' -o -name 'README*' -o -name 'package.json' \) ! -path './node_modules/*'); do
+            mkdir -p "../../../translator/engine/$(dirname $f)"; cp "$f" "../../../translator/engine/$f"
           done
-          while IFS=$'\t' read -r name size url; do
-            case "$name" in bergamot*) curl -sS -f -L -o "engine/$name" "$url";; esac
-          done < list.txt
-          gh api repos/mozilla-extensions/firefox-translations/contents/LICENSE --jq '.download_url' | xargs curl -sS -f -L -o engine/LICENSE || true
-          ls -l engine
-          sha256sum engine/*
-          head -c 600 engine/bergamot-translator-worker.js || true
-      - uses: actions/upload-artifact@v4
-        with:
-          name: engine
-          path: engine
+          cd ../../..
+          find translator/engine -type f -exec ls -l {} \;
+          sha256sum $(find translator/engine -type f)
+          git config user.name Klira
+          git config user.email noreply@users.noreply.github.com
+          git add translator/engine
+          if git diff --cached --quiet; then echo 'nothing changed'; exit 0; fi
+          git commit -m 'Translator engine files (Bergamot, MPL-2.0), downloaded by GitHub Actions'
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1
 
   build:
     if: ${{ github.event_name != 'workflow_dispatch' || inputs.task == 'build' }}
