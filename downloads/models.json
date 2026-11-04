@@ -1,0 +1,40 @@
+{
+ "schema": 1,
+ "updated": "2026-11-04",
+ "url": "https://github.com/VizitSpace/klira/releases/download/translator-models/",
+ "license": "Mozilla Firefox Translations models, MPL-2.0",
+ "models": [
+  {
+   "from": "en",
+   "to": "ru",
+   "version": "2.1",
+   "file": "en-ru-v2.1.zip",
+   "size": 23775354,
+   "sha256": "9dd815fa1c33bcbdcfc4c17b88daee69543e4d8fa20af120f705d1dc8078b95b"
+  },
+  {
+   "from": "en",
+   "to": "uk",
+   "version": "2.2",
+   "file": "en-uk-v2.2.zip",
+   "size": 24859356,
+   "sha256": "f1e2cb3e47b97dad87d333e0e0fb8e36e322f411d888bd1f68a787fe5f89326f"
+  },
+  {
+   "from": "ru",
+   "to": "en",
+   "version": "2.1",
+   "file": "ru-en-v2.1.zip",
+   "size": 25372725,
+   "sha256": "2b52ea1fd016332c4da48afa0b65f5280f4c6a79a498fcd7892551c3a87fb8c4"
+  },
+  {
+   "from": "uk",
+   "to": "en",
+   "version": "1.1",
+   "file": "uk-en-v1.1.zip",
+   "size": 14884677,
+   "sha256": "26708ff5aaf4b068a7487ed8d41931784dec58ef138e7ad238b3924d414bc23f"
+  }
+ ]
+}
