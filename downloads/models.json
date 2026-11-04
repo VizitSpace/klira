@@ -5,12 +5,516 @@
  "license": "Mozilla Firefox Translations models, MPL-2.0",
  "models": [
   {
+   "from": "af",
+   "to": "en",
+   "version": "2.0",
+   "file": "af-en-v2.0.zip",
+   "size": 26011776,
+   "sha256": "9ceca778e5ec0512e3a240f7a96402038e0b453d30a2c0c38c2bf7dbf7b65cb7"
+  },
+  {
+   "from": "ar",
+   "to": "en",
+   "version": "2.2",
+   "file": "ar-en-v2.2.zip",
+   "size": 25895776,
+   "sha256": "b6f1126a39a6ef3d4fc3181b2fde4df59631b2d8c41bb8503866d719de6f0926"
+  },
+  {
+   "from": "az",
+   "to": "en",
+   "version": "2.1",
+   "file": "az-en-v2.1.zip",
+   "size": 25746109,
+   "sha256": "e25da50bf9d31c6373d0eb89fd1dea8438dc57f076e4fb8b93b150f23cc963d6"
+  },
+  {
+   "from": "be",
+   "to": "en",
+   "version": "2.1",
+   "file": "be-en-v2.1.zip",
+   "size": 25270496,
+   "sha256": "fa37aec486329407c2046aef3cb15163446371b58ed7fbfd0615351f9c441025"
+  },
+  {
+   "from": "bg",
+   "to": "en",
+   "version": "2.0",
+   "file": "bg-en-v2.0.zip",
+   "size": 25011535,
+   "sha256": "9d3944928a512d4ef0d9c9bbfe0c279d0a5c6d45a1feb082fa26f981bed07f1b"
+  },
+  {
+   "from": "bn",
+   "to": "en",
+   "version": "1.0",
+   "file": "bn-en-v1.0.zip",
+   "size": 15361194,
+   "sha256": "f396aa2f601f289d565ba9e814a673e59cb2d25af469367d3f06ecca7a2cb11d"
+  },
+  {
+   "from": "bs",
+   "to": "en",
+   "version": "2.0",
+   "file": "bs-en-v2.0.zip",
+   "size": 25934582,
+   "sha256": "d5cfb38ce313706e6b150a2a7b3761336608f0d58ba335cf63c2902a9cf913d9"
+  },
+  {
+   "from": "ca",
+   "to": "en",
+   "version": "2.0",
+   "file": "ca-en-v2.0.zip",
+   "size": 25451796,
+   "sha256": "d325c3d4e69c50fc801ecb7f868615b07e2384b984f0cb403ce19efa2f040901"
+  },
+  {
+   "from": "cs",
+   "to": "en",
+   "version": "2.0",
+   "file": "cs-en-v2.0.zip",
+   "size": 25731325,
+   "sha256": "77c2c083bdd48da55f87b87289c80c50cf2cfc90b2c6994ff2a54d18c0bfa739"
+  },
+  {
+   "from": "da",
+   "to": "en",
+   "version": "1.0",
+   "file": "da-en-v1.0.zip",
+   "size": 15094562,
+   "sha256": "098f50b128e3fc7624b35b9d6364a14fd5f7af00c8b9e003e6939a3203938ddf"
+  },
+  {
+   "from": "de",
+   "to": "en",
+   "version": "2.0",
+   "file": "de-en-v2.0.zip",
+   "size": 25438801,
+   "sha256": "246b03c89213184b0f32734fe3ad7785012384d13d17aa35e7833b70daf990f9"
+  },
+  {
+   "from": "el",
+   "to": "en",
+   "version": "1.1",
+   "file": "el-en-v1.1.zip",
+   "size": 14962745,
+   "sha256": "ffd6eab53b98064a20b8830ef3e9edc1351d44171f97b5be9482d4b2c5470909"
+  },
+  {
+   "from": "en",
+   "to": "af",
+   "version": "2.0",
+   "file": "en-af-v2.0.zip",
+   "size": 25630235,
+   "sha256": "031101c64ef304cf602f44d13e6b4c7fad101c75b36feeaf176ed7530522c614"
+  },
+  {
+   "from": "en",
+   "to": "ar",
+   "version": "2.2",
+   "file": "en-ar-v2.2.zip",
+   "size": 24908156,
+   "sha256": "e199cfa83065b0e66c0d40f70c1d097d21886daeb33fe4956d55cad8ad921c72"
+  },
+  {
+   "from": "en",
+   "to": "az",
+   "version": "2.1",
+   "file": "en-az-v2.1.zip",
+   "size": 25125635,
+   "sha256": "2610f04d452ca14200e1ddef7115abd4b6ce42b304000483fe14642ab6c739e6"
+  },
+  {
+   "from": "en",
+   "to": "be",
+   "version": "2.0",
+   "file": "en-be-v2.0.zip",
+   "size": 24622170,
+   "sha256": "57a3ee37f5154dd37573c0fc0c7455eb86445608e1a028f4ebf3e8f7c267d7c0"
+  },
+  {
+   "from": "en",
+   "to": "bg",
+   "version": "2.0",
+   "file": "en-bg-v2.0.zip",
+   "size": 25410115,
+   "sha256": "fb22870cca7c35f813774d7e8cf8319632feb643606e11e9429d42ec6cda88bc"
+  },
+  {
+   "from": "en",
+   "to": "bn",
+   "version": "1.0",
+   "file": "en-bn-v1.0.zip",
+   "size": 14861572,
+   "sha256": "280d31cd12dac05877a98d7409974d3e07fd63a6259adc189bd6416d22417bca"
+  },
+  {
+   "from": "en",
+   "to": "bs",
+   "version": "2.0",
+   "file": "en-bs-v2.0.zip",
+   "size": 25025288,
+   "sha256": "9cd5cd5075bd94f186c087e0771bdac83e0c559ee952ce4a0bda0f3241ab7d4b"
+  },
+  {
+   "from": "en",
+   "to": "ca",
+   "version": "2.0",
+   "file": "en-ca-v2.0.zip",
+   "size": 25662045,
+   "sha256": "4e844b478b00eafcd1d7753a8b387751814b905f60af8daf6211ca3a9b5ed098"
+  },
+  {
+   "from": "en",
+   "to": "cs",
+   "version": "2.0",
+   "file": "en-cs-v2.0.zip",
+   "size": 25495258,
+   "sha256": "c010597895743774cd3a3bdbb884d40a5e0c8f33cee48214751cdcc6d201a742"
+  },
+  {
+   "from": "en",
+   "to": "da",
+   "version": "1.0",
+   "file": "en-da-v1.0.zip",
+   "size": 14701641,
+   "sha256": "89650d5f1d57adc4f705ed9ce2310636e73ef977203d9d0b2b156cdb34543243"
+  },
+  {
+   "from": "en",
+   "to": "de",
+   "version": "2.1",
+   "file": "en-de-v2.1.zip",
+   "size": 25717421,
+   "sha256": "71f84d49b8cbb2cee78b508151f55ebce876ae5f2ae76742262494ce6de866fc"
+  },
+  {
+   "from": "en",
+   "to": "el",
+   "version": "1.0",
+   "file": "en-el-v1.0.zip",
+   "size": 14579228,
+   "sha256": "af3a646c2b8dbc17757b0177bfc4093dc1886a0c5a63e4876420f9b60feb6332"
+  },
+  {
+   "from": "en",
+   "to": "es",
+   "version": "2.1",
+   "file": "en-es-v2.1.zip",
+   "size": 25365825,
+   "sha256": "479761763563b5e73d14525e4c9584347cd889af06c66ab9fd2b3c99b849f7db"
+  },
+  {
+   "from": "en",
+   "to": "et",
+   "version": "2.0",
+   "file": "en-et-v2.0.zip",
+   "size": 25226915,
+   "sha256": "4a3e482572da2813f883b715489f69d3cc38b4163870d032fc87a26f102cad79"
+  },
+  {
+   "from": "en",
+   "to": "eu",
+   "version": "2.0",
+   "file": "en-eu-v2.0.zip",
+   "size": 25116392,
+   "sha256": "9d3a1189b7a21ee0e135b5008629b649692e68588f9397156151a9a49f914a3c"
+  },
+  {
+   "from": "en",
+   "to": "fa",
+   "version": "1.1",
+   "file": "en-fa-v1.1.zip",
+   "size": 15201931,
+   "sha256": "5770563d198906df0ae13eb35d286d21fc3c3fc132b2ceda08d0e98a568420fb"
+  },
+  {
+   "from": "en",
+   "to": "fi",
+   "version": "2.0",
+   "file": "en-fi-v2.0.zip",
+   "size": 24862460,
+   "sha256": "a6d27319ea5941f7fef3626703642879f77dfc0e69a5dbcc1443d9503ad5a724"
+  },
+  {
+   "from": "en",
+   "to": "fr",
+   "version": "2.0",
+   "file": "en-fr-v2.0.zip",
+   "size": 25744724,
+   "sha256": "c85769643172a50a2bd47f8fee0b52695a61636ae7dd70b5276126cc46fb45fb"
+  },
+  {
+   "from": "en",
+   "to": "gl",
+   "version": "2.1",
+   "file": "en-gl-v2.1.zip",
+   "size": 25436838,
+   "sha256": "a5bbb1f29339d302369f214b1db56f1af72f331e0cbf761e4ba09ea5ebaec921"
+  },
+  {
+   "from": "en",
+   "to": "gu",
+   "version": "1.0",
+   "file": "en-gu-v1.0.zip",
+   "size": 14622221,
+   "sha256": "048800f4155a685fa22a2683e5d8df3d5a56fa93dbb9a616a8ebbd0900bdfbef"
+  },
+  {
+   "from": "en",
+   "to": "he",
+   "version": "1.0",
+   "file": "en-he-v1.0.zip",
+   "size": 14952447,
+   "sha256": "70cef69aa1ea353be4ac029ca023867d72c34abeeb08a24578e48947c19c80a6"
+  },
+  {
+   "from": "en",
+   "to": "hi",
+   "version": "1.0",
+   "file": "en-hi-v1.0.zip",
+   "size": 14854760,
+   "sha256": "4d750aeb948b5bc457111d3da72740f5c3c8186f690eaadf48a86ee66d8ad366"
+  },
+  {
+   "from": "en",
+   "to": "hr",
+   "version": "1.0",
+   "file": "en-hr-v1.0.zip",
+   "size": 14633557,
+   "sha256": "6e8d2d08201279a5bdede88e71238859fcc2ffcb85566e6279df8cd50680e077"
+  },
+  {
+   "from": "en",
+   "to": "hu",
+   "version": "2.1",
+   "file": "en-hu-v2.1.zip",
+   "size": 25100915,
+   "sha256": "6742acad8759bbbdc9bc83999cc174e244f94e083ab409986fec248e0dc2bb05"
+  },
+  {
+   "from": "en",
+   "to": "id",
+   "version": "1.0",
+   "file": "en-id-v1.0.zip",
+   "size": 14615311,
+   "sha256": "4d9354367fba12c58e065bd219321fb7d6a7e1fececa000b4e77e4f2c31c258a"
+  },
+  {
+   "from": "en",
+   "to": "is",
+   "version": "2.0",
+   "file": "en-is-v2.0.zip",
+   "size": 24971094,
+   "sha256": "c4065878d39a1a1e29a558ccf1ccab9722422590fcca8224cd832ebd8e746212"
+  },
+  {
+   "from": "en",
+   "to": "it",
+   "version": "2.1",
+   "file": "en-it-v2.1.zip",
+   "size": 26506066,
+   "sha256": "a1906a2c93520eca479ebcd0f48062e0c5265de8b5892e4922171a2f959c1730"
+  },
+  {
+   "from": "en",
+   "to": "ja",
+   "version": "2.3",
+   "file": "en-ja-v2.3.zip",
+   "size": 36227825,
+   "sha256": "c3a20370b3538668502178b63c0ea63e1f591f7c797042b12b43991af5e4b21f"
+  },
+  {
+   "from": "en",
+   "to": "kn",
+   "version": "1.0",
+   "file": "en-kn-v1.0.zip",
+   "size": 14873571,
+   "sha256": "518319a58fbc37c361925c765b70917b69ddfd17b173dbde537283d1413bc6c0"
+  },
+  {
+   "from": "en",
+   "to": "ko",
+   "version": "2.1",
+   "file": "en-ko-v2.1.zip",
+   "size": 38016786,
+   "sha256": "361b1b30d1209157d2602d42e98d9c7e41926fed03ec19a17534b2b4fd328e93"
+  },
+  {
+   "from": "en",
+   "to": "lt",
+   "version": "2.1",
+   "file": "en-lt-v2.1.zip",
+   "size": 25031593,
+   "sha256": "371cf63bf242723da2bc63d939f8ffdd6b26c295917c97117a544b9e2a70e42f"
+  },
+  {
+   "from": "en",
+   "to": "lv",
+   "version": "2.1",
+   "file": "en-lv-v2.1.zip",
+   "size": 25856140,
+   "sha256": "a5b5daa3fc2e07cc720e58d2dc4b8207485ca9603c28092fe05f6aaf22a1ad2b"
+  },
+  {
+   "from": "en",
+   "to": "ml",
+   "version": "1.0",
+   "file": "en-ml-v1.0.zip",
+   "size": 14296053,
+   "sha256": "9092a35b4f72c1a36702a59dfeeec79c11a61dae6baec56c1ae36bd7b20e32da"
+  },
+  {
+   "from": "en",
+   "to": "mr",
+   "version": "2.0",
+   "file": "en-mr-v2.0.zip",
+   "size": 24733423,
+   "sha256": "75f45d9f69cd4dcf7b6f8012a95bdebf3095bf4e2edae6ad2d832db18e8e9deb"
+  },
+  {
+   "from": "en",
+   "to": "ms",
+   "version": "1.0",
+   "file": "en-ms-v1.0.zip",
+   "size": 15485955,
+   "sha256": "9d2b8d0ad5ec37eb10cb34a418ec750aa27ccb90fd25d285bc9d7ffd555bc9be"
+  },
+  {
+   "from": "en",
+   "to": "nb",
+   "version": "2.0",
+   "file": "en-nb-v2.0.zip",
+   "size": 15317573,
+   "sha256": "05cbb9bb87d4176e37e17280692f59bb019f8363c431cd00990a70c18ac26714"
+  },
+  {
+   "from": "en",
+   "to": "nl",
+   "version": "2.1",
+   "file": "en-nl-v2.1.zip",
+   "size": 25947723,
+   "sha256": "2cbef321c288c5fb326fd79ac216414f6def9fad7db118531dc6bbdaab4bf2d4"
+  },
+  {
+   "from": "en",
+   "to": "pl",
+   "version": "2.1",
+   "file": "en-pl-v2.1.zip",
+   "size": 24856799,
+   "sha256": "c3bbb554dff74590ddb04776057bfbaa52048da12fd668d7439e186fa1ce8c95"
+  },
+  {
+   "from": "en",
+   "to": "pt",
+   "version": "2.1",
+   "file": "en-pt-v2.1.zip",
+   "size": 25859695,
+   "sha256": "bf082bb8e89188aab2ca45d6d6cbc8596b8c5cf3667de0349c0a02407b7d0055"
+  },
+  {
+   "from": "en",
+   "to": "ro",
+   "version": "1.0",
+   "file": "en-ro-v1.0.zip",
+   "size": 14452380,
+   "sha256": "3a26677a47a44636a8b720e2d512a9e6ea5d66f31525f18bcebffcd8e203d3d2"
+  },
+  {
    "from": "en",
    "to": "ru",
    "version": "2.1",
    "file": "en-ru-v2.1.zip",
    "size": 23775354,
    "sha256": "9dd815fa1c33bcbdcfc4c17b88daee69543e4d8fa20af120f705d1dc8078b95b"
+  },
+  {
+   "from": "en",
+   "to": "sk",
+   "version": "2.1",
+   "file": "en-sk-v2.1.zip",
+   "size": 25007514,
+   "sha256": "0f3d0509d146deaa37c641ad31530cda2118e7a2ee2e61dad9a1392984317bc8"
+  },
+  {
+   "from": "en",
+   "to": "sl",
+   "version": "2.1",
+   "file": "en-sl-v2.1.zip",
+   "size": 24802191,
+   "sha256": "92ed8587f09ab0abd481b0b00b4b5afe9b2464523b8d0139d8a29b29f0d65546"
+  },
+  {
+   "from": "en",
+   "to": "sq",
+   "version": "2.0",
+   "file": "en-sq-v2.0.zip",
+   "size": 15372110,
+   "sha256": "07d0c72b0795e236a15e8ed6e16dc0aa3b3c23605f6f9cbb2de38ce8a8221488"
+  },
+  {
+   "from": "en",
+   "to": "sr",
+   "version": "2.0",
+   "file": "en-sr-v2.0.zip",
+   "size": 24732842,
+   "sha256": "fd37306d892cebbac111210ccd9e0051dee3ec7a978a56684c383ac61354056d"
+  },
+  {
+   "from": "en",
+   "to": "sv",
+   "version": "1.0",
+   "file": "en-sv-v1.0.zip",
+   "size": 15088803,
+   "sha256": "4d8c8578fbf48a7153716aa0eac9c85c9b47da0b6df8a0a9f018abcfd9e01e46"
+  },
+  {
+   "from": "en",
+   "to": "ta",
+   "version": "2.0",
+   "file": "en-ta-v2.0.zip",
+   "size": 25087522,
+   "sha256": "0ab179dc5b2fe8696b3ccfe31b1a71e6cd1cf5a4091adb3f3a4754f82f8086e9"
+  },
+  {
+   "from": "en",
+   "to": "te",
+   "version": "1.0",
+   "file": "en-te-v1.0.zip",
+   "size": 14470507,
+   "sha256": "c8be5db0f184ab61cbe11f5c5034bed34a2b2a039637d8c695807e9ad5e9bce3"
+  },
+  {
+   "from": "en",
+   "to": "th",
+   "version": "2.0",
+   "file": "en-th-v2.0.zip",
+   "size": 25024921,
+   "sha256": "757b8271c055a134083e5d8c0f40bdd845bfe9d29983858953ef0ee7ba5d49d6"
+  },
+  {
+   "from": "en",
+   "to": "tl",
+   "version": "2.0",
+   "file": "en-tl-v2.0.zip",
+   "size": 25312518,
+   "sha256": "611e0869bdc3ad1b3c42957bddee443019e5cc0f67216e0eab922353f62dc327"
+  },
+  {
+   "from": "en",
+   "to": "tr",
+   "version": "1.0",
+   "file": "en-tr-v1.0.zip",
+   "size": 15097036,
+   "sha256": "353ff3967e7176e6bdb5b218d61fed0a07c2c31f6a94edf75c90a967499418b8"
+  },
+  {
+   "from": "en",
+   "to": "ug",
+   "version": "2.1",
+   "file": "en-ug-v2.1.zip",
+   "size": 25639591,
+   "sha256": "22c4e92c4a41165681ad7a9315520b9a703b34f00fd7b1521b15db68ff3c9a7a"
   },
   {
    "from": "en",
@@ -21,6 +525,262 @@
    "sha256": "f1e2cb3e47b97dad87d333e0e0fb8e36e322f411d888bd1f68a787fe5f89326f"
   },
   {
+   "from": "en",
+   "to": "ur",
+   "version": "2.0",
+   "file": "en-ur-v2.0.zip",
+   "size": 24595031,
+   "sha256": "44711345c967857787435fe16a4b21f48d46e42503f7e3b713fdd527489cba1b"
+  },
+  {
+   "from": "en",
+   "to": "vi",
+   "version": "2.0",
+   "file": "en-vi-v2.0.zip",
+   "size": 26883337,
+   "sha256": "0289ece853f8db52d6364038fe699cb07f732ac5aaa7a01a54a44e72a22e33ea"
+  },
+  {
+   "from": "en",
+   "to": "zh-Hans",
+   "version": "2.2",
+   "file": "en-zh-Hans-v2.2.zip",
+   "size": 37741862,
+   "sha256": "0cac1e9ff5365eee1a03a1647dac6dc6a31eb81beaa7d62fda7c601af1c1078b"
+  },
+  {
+   "from": "en",
+   "to": "zh-Hant",
+   "version": "2.0",
+   "file": "en-zh-Hant-v2.0.zip",
+   "size": 36398828,
+   "sha256": "2c700f7bb214f6f2f57dfe732ce30001a2217782d4163d3caba5b85ab1ba8057"
+  },
+  {
+   "from": "es",
+   "to": "en",
+   "version": "2.0",
+   "file": "es-en-v2.0.zip",
+   "size": 26235836,
+   "sha256": "d95af28914fc0f7b1a0e7420e4c6f95f7499c69e471736e97211baf2a294df5b"
+  },
+  {
+   "from": "et",
+   "to": "en",
+   "version": "2.0",
+   "file": "et-en-v2.0.zip",
+   "size": 25513822,
+   "sha256": "227a479b2cb5e659c73c717b216bee66b2474c459dd467659a5f7a59c14e3f31"
+  },
+  {
+   "from": "eu",
+   "to": "en",
+   "version": "2.1",
+   "file": "eu-en-v2.1.zip",
+   "size": 25546421,
+   "sha256": "8d669d8b0d4000ea141792766c6c0d800ae11aed9bd0c6f7b286e22b294ff888"
+  },
+  {
+   "from": "fa",
+   "to": "en",
+   "version": "1.0",
+   "file": "fa-en-v1.0.zip",
+   "size": 15425867,
+   "sha256": "39b68a3361833cfd674fa1ea4ea58f8215f0b371f2f35ad98a04bd0ea3055786"
+  },
+  {
+   "from": "fi",
+   "to": "en",
+   "version": "2.0",
+   "file": "fi-en-v2.0.zip",
+   "size": 25923565,
+   "sha256": "add44baf52d2a77f55e12f9f15326cd4cdb1ef86273487728307cb2f85e23890"
+  },
+  {
+   "from": "fr",
+   "to": "en",
+   "version": "2.0",
+   "file": "fr-en-v2.0.zip",
+   "size": 26232294,
+   "sha256": "6f2c4706b8de319ff8cc8a33f1569d518bb80ae7cb8bc26d874f4ab067e1472a"
+  },
+  {
+   "from": "gl",
+   "to": "en",
+   "version": "2.1",
+   "file": "gl-en-v2.1.zip",
+   "size": 25651910,
+   "sha256": "dd460dcf3d7a86126c317707e1613db4e18c0c570b774ac01492c0d20cac595f"
+  },
+  {
+   "from": "gu",
+   "to": "en",
+   "version": "1.0",
+   "file": "gu-en-v1.0.zip",
+   "size": 15379252,
+   "sha256": "7d1e51ef1824f5e93d609cd2dde902eef9edc659ab925d2674416de809f57e54"
+  },
+  {
+   "from": "he",
+   "to": "en",
+   "version": "1.0",
+   "file": "he-en-v1.0.zip",
+   "size": 15641165,
+   "sha256": "7b6e03ddb63e658e259dd7584c1d038730014e0d1d76d4cca6e40e17d6af208b"
+  },
+  {
+   "from": "hi",
+   "to": "en",
+   "version": "1.0",
+   "file": "hi-en-v1.0.zip",
+   "size": 15496497,
+   "sha256": "f8c981e89586f3f302adecbf5cccb751c079c49cb2ab6f74e52ab4dd0227999c"
+  },
+  {
+   "from": "hr",
+   "to": "en",
+   "version": "1.0",
+   "file": "hr-en-v1.0.zip",
+   "size": 15333466,
+   "sha256": "2b50b5dc95ead710abcf408ab9a4e389948040c8f88c9e03efccc8ce584b7af9"
+  },
+  {
+   "from": "hu",
+   "to": "en",
+   "version": "2.1",
+   "file": "hu-en-v2.1.zip",
+   "size": 25429592,
+   "sha256": "439d93d2720edf54e90a9293a2b6f52d2fa9266ed1aef83efbed0af672569633"
+  },
+  {
+   "from": "id",
+   "to": "en",
+   "version": "1.0",
+   "file": "id-en-v1.0.zip",
+   "size": 15207138,
+   "sha256": "98a476a7a193fb1e183d915da9801f1dbe516a55834399fb28dea5bc5b3985f0"
+  },
+  {
+   "from": "is",
+   "to": "en",
+   "version": "2.0",
+   "file": "is-en-v2.0.zip",
+   "size": 25651253,
+   "sha256": "3b9a05861e39efbb05c9e2476bdfe7035ac9af293e12c3278b46a80d6caa5df8"
+  },
+  {
+   "from": "it",
+   "to": "en",
+   "version": "2.0",
+   "file": "it-en-v2.0.zip",
+   "size": 26234789,
+   "sha256": "e1780f7c67dd473fa6c4db93a99a166ab18281d60b5b6e2320441b8ca468fdfc"
+  },
+  {
+   "from": "ja",
+   "to": "en",
+   "version": "2.1",
+   "file": "ja-en-v2.1.zip",
+   "size": 38128641,
+   "sha256": "5dfba604495f727ab1fc418d7a17b3764f07f0230fa5b227384dfc66c14ed692"
+  },
+  {
+   "from": "kn",
+   "to": "en",
+   "version": "1.0",
+   "file": "kn-en-v1.0.zip",
+   "size": 15650132,
+   "sha256": "4fd2182d08ee8b63b66fc3c1729b471c472fb8597910363b466337933397ad04"
+  },
+  {
+   "from": "ko",
+   "to": "en",
+   "version": "2.1",
+   "file": "ko-en-v2.1.zip",
+   "size": 37234484,
+   "sha256": "77dcf5575a0a1dbd2f3c93f64f2789a89b32fb5d01db28c294b5dedaaa8e5cfa"
+  },
+  {
+   "from": "lt",
+   "to": "en",
+   "version": "1.0",
+   "file": "lt-en-v1.0.zip",
+   "size": 15284207,
+   "sha256": "ad455eaf5126f428e68cf1b559aad4a9f244601b653d26115d8bcff37bd42f73"
+  },
+  {
+   "from": "lv",
+   "to": "en",
+   "version": "1.0",
+   "file": "lv-en-v1.0.zip",
+   "size": 15225746,
+   "sha256": "60cc7b88c52f4eabdfd1ef2e2c90270f93578891de9d77885fd00faaa9cc3bc3"
+  },
+  {
+   "from": "ml",
+   "to": "en",
+   "version": "1.0",
+   "file": "ml-en-v1.0.zip",
+   "size": 15540891,
+   "sha256": "86c28b38d6b25df58723f4effb634af10e236b5ec375b147d0d5702e1c681241"
+  },
+  {
+   "from": "mr",
+   "to": "en",
+   "version": "2.0",
+   "file": "mr-en-v2.0.zip",
+   "size": 25054047,
+   "sha256": "e81c101a3001c02845adffb8b7f20dab49e0a4f329d4e476c4cbda57ccddc7d1"
+  },
+  {
+   "from": "ms",
+   "to": "en",
+   "version": "1.0",
+   "file": "ms-en-v1.0.zip",
+   "size": 15081419,
+   "sha256": "6701f2f327eed1b52b9a1353b4956b77cfeb82e48a58871853ce7944d233cf9f"
+  },
+  {
+   "from": "nb",
+   "to": "en",
+   "version": "2.0",
+   "file": "nb-en-v2.0.zip",
+   "size": 15912702,
+   "sha256": "6ccb4a5e45cc4aa97e6fcb8f540be0ed1c31297f57fa9b604894640e58dd5cbf"
+  },
+  {
+   "from": "nl",
+   "to": "en",
+   "version": "2.0",
+   "file": "nl-en-v2.0.zip",
+   "size": 25665131,
+   "sha256": "9dbd6ec6c1a2ac60bd204d6cb9434462c8468b4b8cd4db37e6d421e2b9f9eeff"
+  },
+  {
+   "from": "pl",
+   "to": "en",
+   "version": "2.0",
+   "file": "pl-en-v2.0.zip",
+   "size": 25528827,
+   "sha256": "badf0c2fc4aadb2c4daa22bd8a54e3a0d50c9623567425981a27fb7d8a1f77f9"
+  },
+  {
+   "from": "pt",
+   "to": "en",
+   "version": "2.0",
+   "file": "pt-en-v2.0.zip",
+   "size": 25597728,
+   "sha256": "5f450b4d96ca64a6d3ca660a245d84a0aef1d8a3328c3dd53bf02b8d2160ddcc"
+  },
+  {
+   "from": "ro",
+   "to": "en",
+   "version": "1.0",
+   "file": "ro-en-v1.0.zip",
+   "size": 15271336,
+   "sha256": "a64c5b551a881b03e71d77ca23b4ce08cb69a942151216f4754c056de9376959"
+  },
+  {
    "from": "ru",
    "to": "en",
    "version": "2.1",
@@ -29,12 +789,132 @@
    "sha256": "2b52ea1fd016332c4da48afa0b65f5280f4c6a79a498fcd7892551c3a87fb8c4"
   },
   {
+   "from": "sk",
+   "to": "en",
+   "version": "1.0",
+   "file": "sk-en-v1.0.zip",
+   "size": 15570096,
+   "sha256": "e8ff40e1ed3118fc98f96664b204f992931c650f8c6e78c7a9a16fb146e91f2d"
+  },
+  {
+   "from": "sl",
+   "to": "en",
+   "version": "2.1",
+   "file": "sl-en-v2.1.zip",
+   "size": 26261792,
+   "sha256": "9ba44fa697f1132ff723ce0afb33ba9280ab7f2efc89a3e08b370c43970521f9"
+  },
+  {
+   "from": "sq",
+   "to": "en",
+   "version": "1.0",
+   "file": "sq-en-v1.0.zip",
+   "size": 15169469,
+   "sha256": "08458119145c8475314c017ddd68709bdd848865cdffe1d518f3b4ce79bd6987"
+  },
+  {
+   "from": "sr",
+   "to": "en",
+   "version": "1.0",
+   "file": "sr-en-v1.0.zip",
+   "size": 15248328,
+   "sha256": "2e2c3a0f07e1d3e51d7382edbb7037dff74c1f9ab320b43f714725b9c2e813a4"
+  },
+  {
+   "from": "sv",
+   "to": "en",
+   "version": "1.0",
+   "file": "sv-en-v1.0.zip",
+   "size": 15408686,
+   "sha256": "336eaaef418244a7c92c72f2b06c5a2f30fa3b6bebdb75f0bb615b3a5c2d8dba"
+  },
+  {
+   "from": "ta",
+   "to": "en",
+   "version": "2.0",
+   "file": "ta-en-v2.0.zip",
+   "size": 26384456,
+   "sha256": "ebcf6f165d1386a7295dc1cac13c6a52fcd9bec9ddfa41078b9342a762365451"
+  },
+  {
+   "from": "te",
+   "to": "en",
+   "version": "1.0",
+   "file": "te-en-v1.0.zip",
+   "size": 15854090,
+   "sha256": "8ea9940a361c3d08dee4f550c353c4be578b3c3e001600530980c072b89a308b"
+  },
+  {
+   "from": "th",
+   "to": "en",
+   "version": "2.0",
+   "file": "th-en-v2.0.zip",
+   "size": 25656290,
+   "sha256": "6eda11062aa4f956f11ad762a950bf6da530069a8258415c6118f7c1aa0fe4c0"
+  },
+  {
+   "from": "tl",
+   "to": "en",
+   "version": "2.0",
+   "file": "tl-en-v2.0.zip",
+   "size": 26055801,
+   "sha256": "90d02c204ee31c30f02b08a776b340a6d337cb5eb973ea4c3c7400ee0825243f"
+  },
+  {
+   "from": "tr",
+   "to": "en",
+   "version": "1.0",
+   "file": "tr-en-v1.0.zip",
+   "size": 15243099,
+   "sha256": "88bd8cfd6996359e23ae947690b85d60579aaee7685a13d3f4ee5794b5828bbd"
+  },
+  {
+   "from": "ug",
+   "to": "en",
+   "version": "2.1",
+   "file": "ug-en-v2.1.zip",
+   "size": 25657520,
+   "sha256": "273eb8d5142da008ce20a6adcf2bff8e2ab0473089e8d11949a51f5b3c983e03"
+  },
+  {
    "from": "uk",
    "to": "en",
    "version": "1.1",
    "file": "uk-en-v1.1.zip",
    "size": 14884677,
    "sha256": "26708ff5aaf4b068a7487ed8d41931784dec58ef138e7ad238b3924d414bc23f"
+  },
+  {
+   "from": "ur",
+   "to": "en",
+   "version": "2.1",
+   "file": "ur-en-v2.1.zip",
+   "size": 25121191,
+   "sha256": "7e0f7b5da0d8fb12517d6ae0ef51ad55db2bab98524cec201fd8d2003e8060a8"
+  },
+  {
+   "from": "vi",
+   "to": "en",
+   "version": "1.0",
+   "file": "vi-en-v1.0.zip",
+   "size": 15176894,
+   "sha256": "d35a9701329fd7ecdb4572158490c60c544ab4fc89742dde21571d658ff1e685"
+  },
+  {
+   "from": "zh-Hans",
+   "to": "en",
+   "version": "2.1",
+   "file": "zh-Hans-en-v2.1.zip",
+   "size": 38271414,
+   "sha256": "4855fd012f1cfc8814aa52db6f355149d802e78ec136fc99ada1afd9a27b3858"
+  },
+  {
+   "from": "zh-Hant",
+   "to": "en",
+   "version": "2.0",
+   "file": "zh-Hant-en-v2.0.zip",
+   "size": 37747331,
+   "sha256": "b55234601df079d43ee2f17953c20ee00b8ed76e5fb8b4109fc8879b6551c9f7"
   }
  ]
 }
