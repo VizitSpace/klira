@@ -11,8 +11,11 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: 'build = собрать установщик; models-list = только прочитать список моделей Mozilla для переводчика'
+        description: 'build = собрать установщик; models-list = прочитать список моделей Mozilla; models-publish = выложить/обновить языки переводчика в релиз translator-models; engine-fetch = скачать файлы движка перевода'
         default: 'build'
+      only:
+        description: 'для models-publish: коды языков через запятую для пробного запуска (пусто = все)'
+        default: ''
   push:
     paths:
       - '.github/installer/**'
@@ -55,8 +58,61 @@ jobs:
           name: mozilla-registry
           path: records.json
 
+  models-publish:
+    # Берёт свежие модели Mozilla, кладёт их в релиз translator-models и обновляет downloads/models.json.
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.task == 'models-publish' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install zstandard
+      - name: Build and upload language packs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ONLY: ${{ inputs.only }}
+        run: python3 .github/translator/build_models.py
+      - name: Save models.json to the repository
+        if: ${{ always() }}
+        run: |
+          git config user.name Klira
+          git config user.email noreply@users.noreply.github.com
+          git add downloads/models.json
+          if git diff --cached --quiet; then echo 'nothing changed'; exit 0; fi
+          git commit -m 'Languages of the translator: models.json updated (built by GitHub Actions)'
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1
+
+  engine-fetch:
+    # Только скачивает файлы движка Bergamot (JS и wasm) из репозитория Mozilla и показывает, что там есть.
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.task == 'engine-fetch' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Find and download the engine
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p engine
+          for d in extension/model/static/translation; do
+            gh api "repos/mozilla-extensions/firefox-translations/contents/$d" --jq '.[]|[.name,.size,.download_url]|@tsv' | tee list.txt
+          done
+          while IFS=$'\t' read -r name size url; do
+            case "$name" in bergamot*) curl -sS -f -L -o "engine/$name" "$url";; esac
+          done < list.txt
+          gh api repos/mozilla-extensions/firefox-translations/contents/LICENSE --jq '.download_url' | xargs curl -sS -f -L -o engine/LICENSE || true
+          ls -l engine
+          sha256sum engine/*
+          head -c 600 engine/bergamot-translator-worker.js || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: engine
+          path: engine
+
   build:
-    if: ${{ github.event_name != 'workflow_dispatch' || inputs.task != 'models-list' }}
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.task == 'build' }}
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
