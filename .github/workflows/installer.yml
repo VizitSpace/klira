@@ -9,6 +9,10 @@ name: Build installer
 # Выпуски (Releases) этот процесс не меняет.
 on:
   workflow_dispatch:
+    inputs:
+      task:
+        description: 'build = собрать установщик; models-list = только прочитать список моделей Mozilla для переводчика'
+        default: 'build'
   push:
     paths:
       - '.github/installer/**'
@@ -18,7 +22,41 @@ permissions:
   contents: write
 
 jobs:
+  models-list:
+    # Только читает публичный список моделей Mozilla (для будущего переводчика). Ничего не публикует.
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.task == 'models-list' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read the Mozilla model registry
+        run: |
+          set -e
+          url='https://firefox.settings.services.mozilla.com/v1/buckets/main/collections/translations-models/records'
+          curl -sS -f -m 60 -o records.json "$url"
+          echo "records: $(jq '.data | length' records.json)"
+          {
+            echo '### Models of Mozilla (registry)'
+            echo
+            echo '| from | to | type | version | KB | file |'
+            echo '|---|---|---|---|---|---|'
+            jq -r '.data | sort_by(.fromLang, .toLang, .fileType) | .[]
+              | select(.fromLang=="uk" or .toLang=="uk" or .fromLang=="ru" or .toLang=="ru")
+              | "| \(.fromLang) | \(.toLang) | \(.fileType) | \(.version) | \((.attachment.size/1024)|floor) | \(.attachment.location) |"' records.json
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "== all pairs =="
+          jq -r '.data | map(select(.fileType=="model")) | map("\(.fromLang)->\(.toLang) v\(.version)") | unique | .[]' records.json
+      - name: Can a plain program download a file
+        run: |
+          loc=$(jq -r '.data | map(select(.fileType=="model" and .fromLang=="ru")) | .[0].attachment.location' records.json)
+          base=$(curl -sS -f -m 30 'https://firefox.settings.services.mozilla.com/v1/' | jq -r '.capabilities.attachments.base_url')
+          echo "base=$base loc=$loc"
+          curl -sS -I -m 30 "${base}${loc}" | head -n 12
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mozilla-registry
+          path: records.json
+
   build:
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.task != 'models-list' }}
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
