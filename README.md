@@ -10,7 +10,7 @@
 
 А ещё: умные шаблоны, офлайн-переводчик, текст с экрана (OCR) и быстрое окно с шаблонами, историей буфера и переводом. Всё лишнее выключено по умолчанию, включаете только то, что нужно.
 
-[![Скачать установщик](https://img.shields.io/badge/%E2%AC%87%EF%B8%8F_%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C_%D0%B4%D0%BB%D1%8F_Windows-3B6CF6?style=for-the-badge)](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_Setup_2.11.1.exe)
+[![Скачать установщик](https://img.shields.io/badge/%E2%AC%87%EF%B8%8F_%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C_%D0%B4%D0%BB%D1%8F_Windows-3B6CF6?style=for-the-badge)](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_Setup_2.12.0.exe)
 
 [![Версия](https://img.shields.io/github/v/release/VizitSpace/klira?label=%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F&color=3B6CF6)](https://github.com/VizitSpace/klira/releases/latest)
 ![Windows 10 и 11](https://img.shields.io/badge/Windows-10%20%C2%B7%2011-0078D4)
@@ -116,7 +116,7 @@
 - **Защита паролей.** В полях пароля Windows и в окнах от имени администратора Klira молчит. *(основа)*
 - **Установщик и обновления.** Установка без прав администратора; раз в сутки Klira сообщает о новой версии и показывает, что в ней нового. *2.6*
 - **Три языка интерфейса.** Русский, українська, English; выбирается при установке и в настройках. *2.7*
-- **Резервная копия.** Все настройки одним файлом и перенос на другой компьютер: «О программе → Сохранить копию». *2.7*
+- **Резервная копия.** Один файл для переноса на другой компьютер или на случай, если ПК сломался. Сами выбираете, что в него войдёт: настройки, словарь, история буфера, закреплённые тексты. Можно защитить паролем (AES-256). «О программе → Резервная копия». *2.7, полная копия с историей и паролем: 2.12*
 - **Тема и звук.** Светлая, тёмная или как в Windows; короткий звук при исправлении (по желанию). *(основа)*
 
 </details>
@@ -151,7 +151,7 @@
 
 **Вариант 1. Установщик (рекомендуется)**
 
-1. Скачайте [**Klira_Setup_2.11.1.exe**](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_Setup_2.11.1.exe). Это один файл, больше ничего не нужно. Он подходит для 64-разрядной и 32-разрядной Windows и для компьютеров на ARM (Snapdragon, Surface): подходящую версию установщик выберет сам.
+1. Скачайте [**Klira_Setup_2.12.0.exe**](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_Setup_2.12.0.exe). Это один файл, больше ничего не нужно. Он подходит для 64-разрядной и 32-разрядной Windows и для компьютеров на ARM (Snapdragon, Surface): подходящую версию установщик выберет сам.
 2. Запустите его, выберите язык (русский, українська или English), примите лицензионное соглашение и нажимайте «Далее». Права администратора не нужны. Выбранный язык станет языком окон и меню Klira (потом его можно сменить в настройках).
 3. Значок Klira появится в трее у часов (если не видно, нажмите стрелку `^` рядом с треем). Синяя галочка значит, что работает.
 
@@ -161,9 +161,9 @@
 
 | Ваш компьютер | Архив |
 |---|---|
-| Обычная 64-разрядная Windows (почти все современные ПК) | [Klira_2.11.1_x64.zip](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_2.11.1_x64.zip) |
-| Старая 32-разрядная Windows | [Klira_2.11.1_x86.zip](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_2.11.1_x86.zip) |
-| Windows на ARM (Snapdragon, Surface Pro X / Pro 9 5G и т. п.) | [Klira_2.11.1_arm64.zip](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_2.11.1_arm64.zip) |
+| Обычная 64-разрядная Windows (почти все современные ПК) | [Klira_2.12.0_x64.zip](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_2.12.0_x64.zip) |
+| Старая 32-разрядная Windows | [Klira_2.12.0_x86.zip](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_2.12.0_x86.zip) |
+| Windows на ARM (Snapdragon, Surface Pro X / Pro 9 5G и т. п.) | [Klira_2.12.0_arm64.zip](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_2.12.0_arm64.zip) |
 
 Узнать свой тип: «Параметры Windows → Система → О системе → Тип системы».
 
@@ -255,7 +255,7 @@ Klira сама проверит раз в сутки и покажет увед�
 Копии Klira на других сайтах могут быть подделкой, скачивайте только отсюда. Контрольные суммы лежат в файле [SHA256SUMS.txt](https://github.com/VizitSpace/klira/raw/main/downloads/SHA256SUMS.txt). Откройте PowerShell в папке с файлом и выполните:
 
 ```powershell
-Get-FileHash .\Klira_Setup_2.11.1.exe -Algorithm SHA256
+Get-FileHash .\Klira_Setup_2.12.0.exe -Algorithm SHA256
 ```
 
 Результат должен совпасть с суммой из файла.
@@ -264,6 +264,8 @@ Get-FileHash .\Klira_Setup_2.11.1.exe -Algorithm SHA256
 
 <details>
 <summary><b>Показать историю версий</b></summary>
+
+**2.12.0:** полная резервная копия: настройки, словарь, история буфера и закреплённые тексты в одном файле, по желанию с паролем (AES-256). Вы выбираете, что сохранять и что восстанавливать.
 
 **2.11.1:** грамматика, этап 2, теперь и для украинского и английского (один переключатель на вкладке «Правописание»).
 
@@ -290,7 +292,7 @@ Get-FileHash .\Klira_Setup_2.11.1.exe -Algorithm SHA256
 
 **Klira** is a lightweight Windows tray app that fixes typos and wrong keyboard layout as you type, in Russian, Ukrainian and English. It works offline on your PC, with optional offline translation, smart templates, text recognition from the screen and a quick window (everything extra is off by default); typed text is never stored or sent anywhere. Once a day it asks GitHub for the latest version number (can be turned off).
 
-**Install:** download [Klira_Setup_2.11.1.exe](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_Setup_2.11.1.exe), run it and follow the wizard (no admin rights needed). If Windows SmartScreen warns about an unknown publisher, click "More info" → "Run anyway": the app is not code-signed yet. Verify the file with the SHA-256 in `SHA256SUMS.txt`. Requires Windows 10 or 11, 64-bit. The settings interface is currently in Russian.
+**Install:** download [Klira_Setup_2.12.0.exe](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_Setup_2.12.0.exe), run it and follow the wizard (no admin rights needed). If Windows SmartScreen warns about an unknown publisher, click "More info" → "Run anyway": the app is not code-signed yet. Verify the file with the SHA-256 in `SHA256SUMS.txt`. Requires Windows 10 or 11, 64-bit. The settings interface is currently in Russian.
 </details>
 
 <details>
@@ -298,7 +300,7 @@ Get-FileHash .\Klira_Setup_2.11.1.exe -Algorithm SHA256
 
 **Klira** — невелика програма для Windows у треї, яка виправляє помилки друку та неправильну розкладку під час набору: російська, українська та англійська. Працює офлайн на вашому комп'ютері; набраний текст ніде не зберігається й нікуди не надсилається. Раз на добу запитує у GitHub номер останньої версії (можна вимкнути).
 
-**Встановлення:** завантажте [Klira_Setup_2.11.1.exe](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_Setup_2.11.1.exe), запустіть і дотримуйтесь підказок (права адміністратора не потрібні). Якщо SmartScreen попереджає про невідомого видавця, натисніть «Докладніше» → «Все одно виконати»: програма поки не має цифрового підпису. Перевірте файл за SHA-256 у `SHA256SUMS.txt`. Потрібна Windows 10 або 11, 64 біти. Інтерфейс налаштувань поки що російською.
+**Встановлення:** завантажте [Klira_Setup_2.12.0.exe](https://github.com/VizitSpace/klira/raw/main/downloads/Klira_Setup_2.12.0.exe), запустіть і дотримуйтесь підказок (права адміністратора не потрібні). Якщо SmartScreen попереджає про невідомого видавця, натисніть «Докладніше» → «Все одно виконати»: програма поки не має цифрового підпису. Перевірте файл за SHA-256 у `SHA256SUMS.txt`. Потрібна Windows 10 або 11, 64 біти. Інтерфейс налаштувань поки що російською.
 </details>
 
 ---
